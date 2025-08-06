@@ -1,5 +1,27 @@
 @import "tailwindcss";
 
+/* @font-face {
+  font-family: vazir;
+  src: url('../font/vazir-font-v18.0.0/Farsi-Digits/Vazir-Light-FD.eot');
+  src: url('../font/vazir-font-v18.0.0/Farsi-Digits/Vazir-Light-FD.eot?#iefix') format('FontName-opentype'),
+    url('../font/vazir-font-v18.0.0/Farsi-Digits/Vazir-Light-FD.woff') format('woff'),
+    url('../font/vazir-font-v18.0.0/Farsi-Digits/Vazir-Light-FD.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: Plus Jakarta Sans;
+  src: url('../font/Plus_Jakarta_Sans/static/PlusJakartaSans-Medium.ttf') format('truetype');
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  z-index: 1;
+  background-color: rgb(3 0 20);
+  font-family: Plus Jakarta Sans, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  color: rgb(145 142 160);
 }
