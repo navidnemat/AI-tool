@@ -9,6 +9,7 @@ import { LuCalendarDays } from "react-icons/lu";
 import { MdOutlineFacebook } from "react-icons/md";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoGithub } from "react-icons/io5";
+import BackToTopBtn from "@/components/BackToTopBtn";
 
 export default function Home() {
   return (
@@ -1008,6 +1009,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <BackToTopBtn />
 
       </main>
 
