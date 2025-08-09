@@ -176,18 +176,157 @@ body {
 }
 
 .features-bg {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.05)));
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 100%);
-    -webkit-transition: 0.45s cubic-bezier(0.6, 0.6, 0, 1) opacity;
-    transition: 0.45s cubic-bezier(0.6, 0.6, 0, 1) opacity;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.05)));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 100%);
+  -webkit-transition: 0.45s cubic-bezier(0.6, 0.6, 0, 1) opacity;
+  transition: 0.45s cubic-bezier(0.6, 0.6, 0, 1) opacity;
 }
 
 .icon-border {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.0288)), color-stop(50%, rgba(255, 255, 255, 0.06)), to(rgba(255, 255, 255, 0)));
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.0288) 0%, rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.0288)), color-stop(50%, rgba(255, 255, 255, 0.06)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.0288) 0%, rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 100%);
 }
 
 .icon-border:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  -webkit-mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff)) content-box, -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.06)), color-stop(50.52%, rgba(255, 255, 255, 0.15)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.15) 50.52%, rgba(255, 255, 255, 0) 100%);
+}
+
+.features-box-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  -webkit-mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff)) content-box, -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+  background: linear-gradient(106.24deg, rgba(255, 255, 255, 0.15) -0.68%, rgba(255, 255, 255, 0) 98.03%);
+}
+
+
+.box-hover::before {
+  pointer-events: none;
+  position: absolute;
+  top: -12rem;
+  left: -12rem;
+  z-index: 30;
+  height: 24rem;
+  width: 24rem;
+  --tw-translate-x: var(--mouse-x);
+  --tw-translate-y: var(--mouse-y);
+  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(134 70 244 / var(--tw-bg-opacity));
+  opacity: 0;
+  --tw-blur: blur(100px);
+  -webkit-filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  content: var(--tw-content);
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+}
+
+.features-button-gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.features-button-gradient:hover {
+  --tw-shadow: inset 0px -6px 15px rgba(156, 178, 255, 0.25), inset 0px 6px 15px rgba(229, 156, 255, 0.25);
+  --tw-shadow-colored: inset 0px -6px 15px var(--tw-shadow-color), inset 0px 6px 15px var(--tw-shadow-color);
+  -webkit-box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.features-button-gradient:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  -webkit-mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff)) content-box, -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+  background: -webkit-gradient(linear, left top, right top, color-stop(0.01%, rgba(229, 156, 255, 0.45)), color-stop(50.01%, rgba(186, 156, 255, 0.45)), to(rgba(156, 178, 255, 0.45)));
+  background: linear-gradient(90deg, rgba(229, 156, 255, 0.45) 0.01%, rgba(186, 156, 255, 0.45) 50.01%, rgba(156, 178, 255, 0.45) 100%);
+}
+
+.pricing-circle:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  -webkit-mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff)) content-box, -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.3)), color-stop(28.19%, rgba(255, 255, 255, 0)));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 28.19%);
+}
+
+@keyframes float-up {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+.star {
+  animation-name: float-up;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.pricing-item-border::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0px;
+  border-radius: inherit;
+  padding: 1px;
+  mask: linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px) content-box exclude, linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px);
+  background: linear-gradient(47deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.pricing-gradient-text {
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background: -webkit-linear-gradient(0deg, rgb(229, 156, 255) 0.01%, rgb(186, 156, 255) 50.01%, rgb(156, 178, 255) 100%) text, -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
+}
+
+.pricing-gradient-divider {
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.12) 49.48%, rgba(255, 255, 255, 0) 100%);
+}
+
+.user-border-gradient:before {
     content: '';
     position: absolute;
     inset: 0;
@@ -198,6 +337,65 @@ body {
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     z-index: -1;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.06)), color-stop(50.52%, rgba(255, 255, 255, 0.15)), to(rgba(255, 255, 255, 0)));
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.15) 50.52%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.user-divider:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    -webkit-mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff)) content-box, -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+    background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0)), color-stop(49.48%, rgba(255, 255, 255, 0.12)), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.12) 49.48%, rgba(255, 255, 255, 0) 100%);
+}
+
+.from-dark {
+    --tw-gradient-from: #030014 var(--tw-gradient-from-position);
+    --tw-gradient-to: rgb(3 0 20 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.form-box-gradient:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    -webkit-mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff)) content-box, -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    z-index: -1;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.12)), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.cta-box-gradient:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    -webkit-mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff)) content-box, -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.18)), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 100%);
 }

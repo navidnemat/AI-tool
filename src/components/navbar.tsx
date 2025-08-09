@@ -38,10 +38,10 @@ const Navbar: React.FC = () => {
 
     return (
         <nav
-            className={`fixed w-full top-0 left-0 z-50 transition-all duration-300 ${scrolled ? 'bg-black/60 shadow-md backdrop-blur-md' : 'bg-transparent'
+            className={`fixed w-full top-0 left-0 z-[9999] transition-all duration-300 ${scrolled ? 'bg-black/60 shadow-md backdrop-blur-md' : 'bg-transparent'
                 }`}
         >
-            <div className={`max-w-[1170px] mx-auto px-4 sm:px-6 xl:px-0 transition-all duration-300 ${scrolled ? 'py-4' : 'py-6'} flex flex-col items-center justify-between relative`}>
+            <div className={`max-w-[1170px] mx-auto px-4 sm:px-6 xl:px-0 transition-all duration-300 ${scrolled ? 'py-3' : 'py-6'} flex flex-col items-center justify-between relative`}>
                 <div className='flex items-center justify-between relative w-full'>
                     <div className='w-full lg:w-1/4 flex items-center justify-between'>
                         <a>
